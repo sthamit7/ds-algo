@@ -59,18 +59,67 @@ the programmer to easily access or modify the values within them.
     - Some provide other functionality that make them extremely useful
     
 💻 (20:21) The Array
+    - A pretty common data structure taught in most programming classes 
+
 ⌨️ (20:58) Array Basics
+    - fundamentally a list of similar values
+    - can be store anything => usernames, high scores, prices, etc.
+    - store values of the same data type => integer, float ,etc.
+    - item referred to as "element"
+    - three attributes => A name , A Type , A size 
+
 ⌨️ (22:09) Array Names
+    - Array Names => name of the array, used to reference & interact with it
+      Example: Names =  ["John Smith", "Gary Vee"]; Salaries = [10000, 12400]
+
 ⌨️ (22:59) Parallel Arrays
+    - Two or more arrays which => contain the same no. of elements => have corresponding values in the same position
+    - extremely useful for storing different types of data about the same entity
+
 ⌨️ (23:59) Array Types
+    - what type of information is stored or will be stored within that array
+    - has to hold all the same type of information
+
 ⌨️ (24:30) Array Size
+    - Immutable 
+    - a set integer that is fixed upon creation of the array
+    - represents the total amount of elements that are able to be stored within the array
+
 ⌨️ (25:45) Creating Arrays
+    - 2 different ways to create an array in most languages
+     => populate the array with elements right then & there
+     => set a specific size for the array, then populate it later
+
 ⌨️ (26:11) Populate-First Arrays
+    - defining & filling an array as soon as you create it is used mainly for when you already know which values are going to be held within it
+    - The way varies from languages => Java, Python, C#
+     => int array[] = {1,2,3}; //Java 
+     => array =[1,2,3]         // Python
+     => int[] array = {1,2,3}; // C#
+
 ⌨️ (28:09) Populate-Later Arrays
+    - creating an array by setting an initial size for our array, but not filing it with any elements
+     => slowly populate it as the programs run
+     => used for user-entered information
+     => int array [] =new int[10]; // Java
+     => int[] arrray = new int[10]; // C#
+
 ⌨️ (30:22) Numerical Indexes
+    - get information that is stored withing the array, we use a number Indexes
+    - an integer which corresponds to an element within the array
+
 ⌨️ (31:57) Replacing information in an Array
+    - Referencing an arrays index is also h0w we replace elements within an array
+
 ⌨️ (32:42) 2-Dimensional Arrays
+    - an array with an array at each index is known as a 2-Dimensional array
+    - useful for programming chessboard, bingo board, image with rgb values,etc
+    - includes 2 indexes => one for the column and other with row
+    - there are 3d arrays and 4d arrays for complex programming
+
 ⌨️ (35:01) Arrays as a Data Structure
+    - accessing, searching, inserting, deleting in an array
+    -  O(1), 
 ⌨️ (42:21) Pros and Cons
 💻 (43:33) The ArrayList
 ⌨️ (44:42) Structure of the ArrayList

@@ -119,21 +119,78 @@ the programmer to easily access or modify the values within them.
 
 ⌨️ (35:01) Arrays as a Data Structure
     - accessing, searching, inserting, deleting in an array
-    -  O(1), 
+    - accessing => O(1) that is why arrays are fixed size
+    - searching => O(n) because of unsorted lists, must use linear search
+    - inserting => O(n) because inserting an element within the array requires you to shift every element that's after the index you want to insert the value at to the right one space
+    - deleting => O(n) because deleting an element within the array requires you to shift every element to the right of the one you want to delete down one index
+
 ⌨️ (42:21) Pros and Cons
+    - Pros => Good for storing similar contiguous data, O(1) accessing power, very basic, easy to learn and master
+    - Cons => size of the array cannot be changed once Initialized,
+    inserting and deleting are not efficient, can be wasting storage space
+    - Overall, pretty reliable, has some flaws as well as advantages, Can be used in almost any program if need be, but sometimes you may want extra functionality
+
 💻 (43:33) The ArrayList
+    - can be thought as growing array
+    - size is dynamic
+
 ⌨️ (44:42) Structure of the ArrayList
+    - backed by an array
+    - makes it have a similar functionality
+
 ⌨️ (45:19) Initializing an ArrayList
+    - varies based on languages
+    - Python list are both array and ArrayLists
+    - ArrayList<integer> arrayList = new ArrayList<integer>(); //Java
+    - ArrayList arrayList = new ArrayList(); //C#
+
 ⌨️ (47:34) ArrayList Functionality
+    - can be thought as evolved array
+    - beefier, more functionality, more powerful
+    - pre-build arrayList "class" => prebuilt functions that are at our disposal
+    - varies based on languages
+
 ⌨️ (49:30) ArrayList Methods
+    - because of the variability, only 6 common methods
+    
 ⌨️ (50:26) Add Method
+    - two different types: 
+    - Add(Object)=> appends the element you pass in as an argument to the end of the arrayList => Autoboxing, puts the object to next open indexes
+    - Add(Object, Index) => appends the element you pass in as an argument at the index you pass in
+
 ⌨️ (53:57) Remove Method
+    - two methods:
+    - Remove(Index) => removes the object at the index you provide
+    - Remove(Object) => removes the first instance of the object passed into the arrayList
+
 ⌨️ (55:33) Get Method
+    - Get(Index) => returns the object contained at the given index
+
 ⌨️ (55:59) Set Method
+    - set method is how we replace elements within the arrayList
+    - Set (Index, Object) => sets the element at the index which you passed in, to the object you also passed in
+
 ⌨️ (56:57) Clear Method
+    - Clear() => clears the arrayList, deleting every element entirely
+
 ⌨️ (57:30) toArray Method
+    - used to convert an arrayList to an Array
+    - toArray() => converts the arrayList to an array. Must be equal to the creation of an new array
+
 ⌨️ (59:00) ArrayList as a Data Structure
+    - accessing, searching, inserting, deleting
+    - accessing => get method, O(1), 
+    - searching => O(n)
+    - inserting => Add(Object,Index); Add(Object), O(n)
+    - deleting => Remove(Object),Remove(Index),O(n)
+
 ⌨️ (1:03:12) Comparing and Contrasting with Arrays
+    - Arrays- Fixed size, can store all data types, methods to be created,
+    don't requires much memory and upkeep,
+      smaller tasks, where you won't be interacting or changing the data
+    - ArrayLists- Dynamic size, can only store objects, methods are created for you, requires more memory use and upkeep
+      more interactive programs where you will be Modifying the data
+
 💻 (1:05:02) The Stack
 ⌨️ (1:05:06) The Different types of Data Structures
 ⌨️ (1:05:51) Random Access Data Structures

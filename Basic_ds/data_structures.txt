@@ -464,11 +464,30 @@ the programmer to easily access or modify the values within them.
     - this fact must be the same recursively for all parent node's contained within the heap
 
 ⌨️ (2:40:59) Building Heaps
+    - recursively go up tree and swap nodes if necessary
+    - either greater than or less than the node above it
 
 ⌨️ (2:44:20) Deleting from Heaps
+    - Remove the root node from our heap
+    - Replace it with the node furthest to the right
+    - "heapify" the heap by comparing parent node's to their children and swapping if necessary
+
 ⌨️ (2:46:00) Heap Implementations
+    - Most commonly used in the Implementation of HeapSort
+        - A sorting algorithm which takes in a list of elements, builds them into a min or max heap, and the removes the root node continuously to make a sorted list
+    - Priority Queues
+        - an advanced data structure which your computer uses to designate tasks and assign computer power based on how urgent the matter is
+
 💻 (2:48:15) Graphs
+    - composed of pieces of information, the paths that run between them
+    - non-linear data structure consisting of nodes and edges
+        - finite set of nodes(vertices)
+        - nodes are connected by the edges
+    - multiple starting points
+    - multiple branches
+
 ⌨️ (2:49:25) Graph Basics
+    - 
 ⌨️ (2:52:04) Directed vs. Undirected Graphs
 ⌨️ (2:53:45) Cyclic vs. Acyclic Graphs
 ⌨️ (2:55:04) Weighted Graphs

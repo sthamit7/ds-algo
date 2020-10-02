@@ -243,48 +243,228 @@ the programmer to easily access or modify the values within them.
     - are used everywhere, both in the actual writing of code as well as in the real-world situations
     - Recursion=> The process of functions repeatedly calling themselves
     - Undo/Redo, Back-programming
-    
+
 💻 (1:18:01) The Queue
+    - Sequential access data structure which follows the FIFO methodology
 ⌨️ (1:18:51) Queue Basics
+    - Add elements in tail
+    - Remove elements from Head
+
 ⌨️ (1:20:44) Common Queue Methods
+    - Enqueue Method
+    - Dequeue Method
+    - Peek Method
+    - Contains Method
+
 ⌨️ (1:21:13) Enqueue Method
+    - Enqueue(object)
+    - example.enqueue("something")
+
 ⌨️ (1:22:20) Dequeue Method
+    - Dequeue(object)
+    - example.dequeue("something")
+
 ⌨️ (1:23:08) Peek Method
+    - returns the object that's at the forefront of our Queue
+    - Peek()
+
 ⌨️ (1:24:15) Contains Method
+    - returns whether or not the queue contains an object
+
 ⌨️ (1:25:05) Time Complexity Equations
+    - accessing: O(n)
+    - searching: O(n)
+    - inserting: O(1)
+    - deleting: O(1)
+
 ⌨️ (1:27:05) Common Queue Uses
+    - used very often in programming variety of functions
+    - job scheduling, printer queueing,
+    - modern cameras
+
 💻 (1:28:16) The Linked List
+    - Sequential access
+    - linear data structure
+    - every element is a separate object called a node, which has 2 parenthesis
+    - data, reference => pointer which points to the next node in the List
+
 ⌨️ (1:31:37) LinkedList Visualization
+    - the list can have null if it is the only node
+    - the head node points to another node
+    - the tail node points to null
+
 ⌨️ (1:33:55) Adding and Removing Information
+    - data can flow in and out of any point of a linked list
+    - add or remove from head, middle or tail
+    - add to head => make that new node's pointer to the current head of the linked list
+    - remove from head => value as null
+    - add to middle => make the pointer of new node point to the node after the location we want to insert at, set the node before the location we want to insert at to point towards the new node
+    - remove from middle => make the pointer of the node previous to the one we're removing, to now point to the node after the one we're removing
+    - add to tail => make the current tail point towards the new node you want to add
+    - remove from tail => set the previous tail to point towards a null value instead of the current tail
+
 ⌨️ (1:41:28) Time Complexity Equations
+    - accessing: O(n)
+    - searching: O(n)
+    - inserting: O(n) or  O(1)
+    - deleting: O(n) or  O(1)
+
 ⌨️ (1:44:26) Uses for LinkedLists
+    - can be used in the backing of other data structures
+    - we can use linkedlists to make Stacks, Queues, etc.
+    - music player playlist
+    - photo gallery
+    Drawback => only go forward, never backward
+
 💻 (1:47:19) The Doubly-LinkedList
+    - same as linked list
+    - able to traverse both forwards and backwards using pointers
+    - previous pointer and next pointer
+
 ⌨️ (1:48:44) Visualization
+    - Head  node can have with null previous and next pointers
+ 
 ⌨️ (1:50:56) Adding and Removing Information
+    - Add to head=> set the new nodes next to point towards the current head of the list,
+    take the new node that we want to insert, and set its previous to null, set the current head's previous to point towards this new node
+    - Remove from head=> set hte head nodes next to point towards a null value, set the second nodes previous to also point towards a null value. 
+    - Add to middle=> set the new nodes' previous to point towards the node previous to the position you want to insert at, set the new nodes next to point towards the node after the position you want to insert at, set the next and previous on the node's before and after the one youre inserting to point towards the new node
+    - Remove from middle=> set the node before the one you want to remove's next to point towards the node after the one we want to remove, set the node after the one we want to remove's previous to point towards the node before the one we want to remove, set both pointers of node we want to remove to a null value
+    - Add to tail=> set the next pointer of the current tail to point towards the new node we want to become the tail, set the previous of the new node that we're adding to be pointing towards the current tail of the list, make the new nodes next point towards a null value
+    - Remove from tail => set the tail nodes previous to point towards null, set the second to last node's next to also points towards the null.
+
 ⌨️ (1:58:30) Time Complexity Equations
+    - accessing: O(n)
+    - searching: O(n)
+    - inserting: O(n) or  O(1)
+    - deleting: O(n) or  O(1)
+
 ⌨️ (1:59:06) Uses of a Doubly-LinkedList
+    - the back and forth functionality
+    - webpages switching functions, undo-redo functions, open recent functions
+
 💻 (2:00:21) The Dictionary
+    - one of the most abstract data structures
+    - also called maps and associative arrays
+    - key/value pairs 
+
 ⌨️ (2:01:15) Dictionary Basics
+    - think of key/value pair like a social security number
+
 ⌨️ (2:02:00) Indexing Dictionaries
+    - we index Dictionaries using these keys instead of numberical index
+
 ⌨️ (2:02:40) Dictionary Properties
-💻 (2:05:53) Hash Table Mini-Lesson
+    - the key's in key/value pair can be any primitive dat type
+    - strings, another Dictionaries, boolean, integers,
+    2 extremely important restrictions
+    - every key can only appear once within the Dictionary
+    - each key can only have one value
+    - there can be duplicates of values within a Dictionary
+
+💻 (2:05:53) Dictionary Hash Table Mini-Lesson
+    - cannot index the key, because its based upon the simple assumption that the size of the array is not too large
+    - fundamentally a way to store this information in such a way that we're able to cut down the amount of nil values while also allowing for the information to be stored in a way that is easily accessible.
+    - Hash function => will take all the keys for a given Dictionary and strategically map them to certain index locations in an array so that they can eventually be retrieved easily
+    - The goal of a good hashing function is to take in a key an reliably place it somewhere in the table so that it can be accessed later by the computer
+
+    - Take the key, divide it by itself, then multiply the result by the number of digits in the key minus 1 => (1000000/1000000) x (7-1) 1million is the key, this key will be in index 6. 
+    - we can consolidate the keys from many keys into index slots
+    - Dictionaries are built upton these hash tables, and the key's in out key/value pairs are stored in memory in these hash tables at indexes which are determined by a hash function
+
+    -What happens when we run two different dictionary keys in to a has function, and the computer tells us to store them at the same index location?
+    - This can occur Hash collision
+    - can be solved 2 ways => Open addressing & Closed addressing
+    - open addressing => put the key in some other index location separate from the one returned to us by the hash function
+    - closed addressing => uses linked list to chain together keys which result in the same has value
+
 ⌨️ (2:13:26) Time Complexity Equations
+    Worst case scenario
+    - accessing: O(n)
+    - searching: O(n)
+    - inserting: O(n) or  O(1)
+    - deleting: O(n) or  O(1)
+    Average case scenario
+    - accessing: O(1)
+    - searching: O(1)
+    - inserting: O(1)
+    - deleting: O(1)
+
+    Uses: 
+    - the option for non-numerical indexes
+    - the flexibility when it comes to making keys
+    - the speed which comes with the hash table Implementation
+
 💻 (2:16:39) Trees
 ⌨️ (2:16:55) Introduction to Hierarchical Data
+    - store data Hierarchically as opposed to linearly
+    - File structure in the computer can be a good example
+ 
 ⌨️ (2:18:54) Formal Background on the Tree
+    - abstract data structure which contains a series of linked nodes connected together to form a Hierarchical representation of information
+    - like a linkedlists where each node has the option of pointing towards a multiple nodes
+
 ⌨️ (2:20:03) Tree Terminology and Visualization
+    - Vertice => A certain node in a Tree
+    - Edge => A connection between nodes
+    - Root node => Topmost node of a Tree
+    - Child node => A certain node which has an edge connecting it to another node one level above itself
+    - parent node => any node which has 1 or more child nodes
+    - leaf node => a node in a tree which does not have any child nodes
+    - Height => Property of the tree => number of edges on the longest possible path down towards a leaf
+    - depth => property of a node => Number of edges required to get from that particular node to the root node
+
 ⌨️ (2:25:08) Different types of Trees
+    - regular trees => great for storing Hierarchical data, but their power can really be Heightened when you start messing around with how the data is actually stored within them
+    => Tries, Graphs, Heaps
+    => Binary Search tree => simple variation on the standard tree which has three restrictions on it to help organize the data
+        - a node can have at most 2 children
+        - for any give parent node, the child to the left has a value less than or equal to itself, and the right has a value greater than or equal to itself
+        - no 2 nodes can contain the same value
+        Advantages: 
+        - we are able to search through them in Logarithmic time
+        
 ⌨️ (2:28:07) Uses for the Tree
+    - data sets => file structure, family tree, company Hierarchy, etc
+
 💻 (2:29:00) Tries
+    - Trees can become even more useful once you start setting restrictions on how and where data can be stored within them
+    - often overlooked since it is only used in specific situations
+
 ⌨️ (2:29:50) Trie Basics
+    - is a tree-like data structure whose nodes store letters of an alphabet in the form of characters
+    - we can carefully construct this tree of characters in such a ay which allows us to quickly retrieve words in the form of strings by traversing down a path of the trie in a certain way
+
 ⌨️ (2:30:41) Trie Visualization
+    - root node can be empty with references
+    - similarly with every node can have characters with references and traverse
+
 ⌨️ (2:34:33) Flagging
+    - marking the end of a word by having it also point towards a "flag" to let the computer know that the end of a word has occurred
+    
 ⌨️ (2:35:15) Uses for Tries
+    - limited but effective => autofilling, spell check, etc.
+    - big programs like google docs dont just use tries containing a few words or even all words starting with a certain letter. they are storing entire english dictionary
+    
 💻 (2:38:25) Heaps
+    - similar to tree
+
 ⌨️ (2:38:51) Heap Basics
+    - special tree where all parent nodes compare to their children node's in some specific way by being more or less extremely
+        - Either greater than or less than
+        - Determines where the data is stored
+        - Usually dependent on the parent Node's value
+
 ⌨️ (2:39:19) Min-Heaps
+    - the value at the root node must be minimum amongst all of its children
+    - this fact must be the same recursively for all parent node's contained within the heap
+
 ⌨️ (2:40:07) Max-Heaps
+    - the value at the root node must be maximum amongst all of its children
+    - this fact must be the same recursively for all parent node's contained within the heap
+
 ⌨️ (2:40:59) Building Heaps
+
 ⌨️ (2:44:20) Deleting from Heaps
 ⌨️ (2:46:00) Heap Implementations
 💻 (2:48:15) Graphs

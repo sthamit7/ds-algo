@@ -194,15 +194,56 @@ the programmer to easily access or modify the values within them.
 💻 (1:05:02) The Stack
 ⌨️ (1:05:06) The Different types of Data Structures
 ⌨️ (1:05:51) Random Access Data Structures
+    - Provides O(1) Accessing
+    - Independent elements
+    - Arrays and ArrayLists
+
 ⌨️ (1:06:10) Sequential Access Data Structures
+    - can only be accessed in a particular order
+    - Each element is dependent on the others
+    - May only be obtainable through those those other elements
+    - also limited access 
+    - Do not provide O(1) accessing
+    - Stacks, Queues, Linked lists
+
 ⌨️ (1:07:36) Stack Basics
+    - We add elements and remove elements according to the LIFO principle
+    - Last in First Out
+
 ⌨️ (1:09:01) Common Stack Methods
+    - Push Method
+    - Pop Method
+    - Peek Method
+    - Contains Method
+
 ⌨️ (1:09:45) Push Method
+    - Pushes an object or element onto the group of top of the Stack
+    - Push(object)
+    - exampleStach.push("something")
+
 ⌨️ (1:10:32) Pop Method
+    - removes an element from the top of the Stack
+    - Pop()
+
 ⌨️ (1:11:46) Peek Method
+    - Allows you to get the value at the top of the list without removing it
+    - Peek()
+
 ⌨️ (1:12:27) Contains Method
+    - Used for searching through the Stack
+    - contains()
+
 ⌨️ (1:13:23) Time Complexity Equations
+    - accessing: O(n)
+    - searching: O(n)
+    - inserting: O(1), push(object)
+    - deleting: O(1) pop()
+
 ⌨️ (1:15:28) Uses for Stacks
+    - are used everywhere, both in the actual writing of code as well as in the real-world situations
+    - Recursion=> The process of functions repeatedly calling themselves
+    - Undo/Redo, Back-programming
+    
 💻 (1:18:01) The Queue
 ⌨️ (1:18:51) Queue Basics
 ⌨️ (1:20:44) Common Queue Methods
